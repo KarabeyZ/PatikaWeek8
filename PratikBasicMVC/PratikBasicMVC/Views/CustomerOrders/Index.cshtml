@@ -1,0 +1,16 @@
+﻿@model CustomerOrderViewModel
+
+<h1> SİPARİSLER </h1>
+
+<ul>
+    <li>
+        @Model.Customer.Id --- @Model.Customer.FirstName @Model.Customer.LastName --- @Model.Customer.Email
+        <ul>
+            @foreach(var item in Model.Orders)
+            {
+                <ul><li>@item.Id --- @item.ProductName --- @item.Price --- @item.Quantity </li> </ul>
+            }
+        </ul>
+    </li>
+
+</ul>
